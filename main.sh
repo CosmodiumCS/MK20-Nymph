@@ -10,34 +10,36 @@ reset="\e[0m"
 desktop=false
 tools=false
 
-install-false
+install=false
 
 
 # check for arguments
+if [[ $# -eq 0 ]] ; then
+    echo -e "${red}No arguments specified. Use -h to see a list of possible arguments.${reset}"
+    exit 0
+fi
+
 while [ -n "$1" ]
 do
 case "$1" in
 
 -h) 
   cat help.txt
-
-  art=false
-  exit
+  exit 0
 ;;
 
 -d) 
-  
   desktop=true
 ;;
 
 -t) 
-  
   tools=true
 ;;
 
-
-
-*) echo -e "$1 is not an option" ;;
+*) 
+  echo -e "${red}$1 is not an option. See -h for a list of arguments. ${reset}" 
+  exit 0
+;;
 esac
 shift
 done
@@ -45,7 +47,7 @@ done
 # check if run with sudo
 if [ "$EUID" -ne 0 ]
     then echo -e "Please run as root/sudo permissions"
-    exit
+    exit 0
 fi
 
 # FORCE THEM TO SEE THE ASCII ART
@@ -73,8 +75,6 @@ echo -e ''${red}${bold}'
                       '${reset}''
 
 #sleep 5
-echo -e "Be sure to read the -h before starting."
-#sleep 2
 
 if [ "$tools" = true ]
   then
