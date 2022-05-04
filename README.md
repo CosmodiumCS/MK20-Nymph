@@ -19,5 +19,5 @@ sudo chmod +x main.sh
 and respond to the prompts that will appear. See `-h` for options.
 
 ### Credit
-[Template plasma theme](https://github.com/yeyushengfan258/LyraS-kde)
-[Saints icons](https://github.com/itsjustshepherd)
+ - [Template plasma theme](https://github.com/yeyushengfan258/LyraS-kde)
+ - [Saints icons](https://github.com/itsjustshepherd)
