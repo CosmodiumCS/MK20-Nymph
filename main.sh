@@ -103,6 +103,7 @@ done
 
 if [ "$install" = true ]
   then
+  apt-get update
 
   if [ "$desktop" = true ]
     then
@@ -114,5 +115,4 @@ if [ "$install" = true ]
     then
     chmod +x runoffs/tools.sh
     ./runoffs/tools.sh
-
 fi

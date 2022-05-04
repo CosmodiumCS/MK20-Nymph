@@ -1,7 +1,11 @@
 
 cd $HOME
-apt-get update
 
 apt-get -y kde-plasma-desktop
+apt-get -y feh
 
-cp -r $HOME/saints-desktop/assets/.kde4 $HOME
+# copy kde configuration to home directory
+cp -r -f $HOME/nymph/assets/.kde4 $HOME
+
+# change wallpaper
+feh -bg --scale $HOME/nymph/assets/wallpapers/saints-name.png
