@@ -19,11 +19,12 @@ if [[ $# -eq 0 ]] ; then
     exit 0
 fi
 
+# arguments
 while [ -n "$1" ]
 do
 case "$1" in
 -h) 
-  cat help.txt
+  cat assets/help.txt
   exit 0
 ;;
 -d) 
@@ -42,7 +43,7 @@ done
 
 # check if run with sudo
 if [ "$EUID" -ne 0 ]
-    then echo -e "Please run as root/sudo permissions"
+    then echo -e "${red}Please run as root${reset}"
     exit 0
 fi
 
@@ -65,21 +66,38 @@ echo -e ''${red}${bold}'
                       '${reset}''
 sleep 5
 
+
+# install components = true
 if [ "$tools" = true ]
   then
-  echo -e "${blue}Found tools${reset}"
+  echo -e "${blue}[!] Found tools${reset}"
   sleep 2
 fi
 
 if [ "$desktop" = true ]
   then
-  echo -e "${blue}Found desktop${reset}"
+  echo -e "${blue}[!] Found desktop${reset}"
   sleep 2
 fi
 
+# install components = false
+if [ "$tools" = false ]
+  then 
+  echo -e "${red}[!] Skipping tool installation${reset}"
+  sleep 2
+fi
+
+if [ "$desktop" = false ]
+  then 
+  echo -e "${red}[!] Skipping desktop installation${reset}"
+  sleep 2
+fi
+
+
+# continue prompt
 while true
 do
-  read -r -p "Would you like to continue with the installation? [Y/n]" input
+  read -r -p "Is the selection correct, and would you like to begin the install? [Y/n]" input
   case $input in
     [yY][eE][sS]|[yY])
       echo -e "${green}Beginning Installation...${reset}"
@@ -91,7 +109,7 @@ do
     [nN][oO]|[nN])
       echo -e "${red}Operation canceled.${reset}"
       break
-      exit
+      exit 0
       ;;
 
     *)
@@ -101,18 +119,20 @@ do
   esac
 done
 
+# sourcing
 if [ "$install" = true ]
   then
   apt-get update
 
   if [ "$desktop" = true ]
     then
-    chmod +x runoffs/desktop.sh
-    ./runoffs/desktop.sh
+    chmod +x ./source/desktop.sh
+    exec ./source/desktop.sh
   fi
 
   if [ "$tools" = true ]
     then
-    chmod +x runoffs/tools.sh
-    ./runoffs/tools.sh
+    chmod +x ./source/tools.sh
+    exec ./source/tools.sh
+  fi
 fi
