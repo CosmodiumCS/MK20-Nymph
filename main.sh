@@ -22,20 +22,16 @@ fi
 while [ -n "$1" ]
 do
 case "$1" in
-
 -h) 
   cat help.txt
   exit 0
 ;;
-
 -d) 
   desktop=true
 ;;
-
 -t) 
   tools=true
 ;;
-
 *) 
   echo -e "${red}$1 is not an option. See -h for a list of arguments. ${reset}" 
   exit 0
@@ -52,38 +48,34 @@ fi
 
 # FORCE THEM TO SEE THE ASCII ART
 echo -e ''${red}${bold}'
-    ..                                       
-    .''.                                     
-      .''..                                   
-      ......                                 
-        .......                               
-        ........                            
-      ..............                         
-      ...............                       
-        ................                     
-        ................                   
-          ...............                   
-        .................   ______  ______  __  __   __  ______  ______       _____   ______  ______  __  __   ______  ______  ______  
-          ...............  /\  ___\/\  __ \/\ \/\ "-.\ \/\__  _\/\  ___\     /\  __-./\  ___\/\  ___\/\ \/ /  /\__  _\/\  __ \/\  == \ 
-            .............  \ \___  \ \  __ \ \ \ \ \-.  \/_/\ \/\ \___  \    \ \ \/\ \ \  __\\ \___  \ \  _"-.\ /_/\ \/\ \ \/\ \ \  _-/ 
-                ..........   \/\_____\ \_\ \_\ \_\ \_\\"\_\ \ \_\ \/\_____\     \ \____-\ \_____\/\_____\ \_\ \_\  \ \_\ \ \_____\ \_\   
-              ...  ...  ..    \/_____/\/_/\/_/\/_/\/_/ \/_/  \/_/ \/_____/     \/____/ \/_____/\/_____/\/_/\/_/   \/_/  \/_____/\/_/                                                                                                                            
-                ....  ...                   
-                .    ....                                          '${reset}${bold}'Welcome to the Team'${red}'
-                    ...                                    saintssec.com         github.com/soulsender      
-                      ....
+ ..                          
+  ...                        
+  ....                      
+    .....                    
+    ........                 
+    ..........         __                           _                      
+    ............    /\ \ \ _   _  _ __ ___   _ __  | |__                 
+     ...........   /  \/ /| | | || `_ ` _ \ | `_ \ | `_ \      
+      ..........  / /\  / | |_| || | | | | || |_) || | | |              
+        ........  \_\ \/   \__, ||_| |_| |_|| .__/ |_| |_|                
+            ....           |___/            |_|          
+           .. ..                             
+             ..             '${reset}${bold}'Welcome to the Team'${reset}${red}'
+                     saintssec.com      'By Soulsender'
                       '${reset}''
 
-#sleep 5
+sleep 5
 
 if [ "$tools" = true ]
   then
   echo -e "${blue}Found tools${reset}"
+  sleep 2
 fi
 
 if [ "$desktop" = true ]
   then
   echo -e "${blue}Found desktop${reset}"
+  sleep 2
 fi
 
 while true
@@ -91,9 +83,10 @@ do
   read -r -p "Would you like to continue with the installation? [Y/n]" input
   case $input in
     [yY][eE][sS]|[yY])
-      echo -e "${green}Beginning Installation..."
+      echo -e "${green}Beginning Installation...${reset}"
       sleep 2
       install=true
+      break
       ;;
 
     [nN][oO]|[nN])
@@ -108,3 +101,18 @@ do
 
   esac
 done
+
+if [ "$install" = true ]
+  then
+
+  if [ "$desktop" = true ]
+    then
+    chmod +x runoffs/desktop.sh
+    ./runoffs/desktop.sh
+  fi
+
+  if [ "$tools" = true ]
+    then
+    chmod +x runoffs/tools.sh
+    ./runoffs/tools.sh
+fi

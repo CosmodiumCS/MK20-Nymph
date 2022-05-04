@@ -1,5 +1,7 @@
+
 Saints Desktop
-https://github.com/Soulsender/saints-desktop
+By Soulsender
+github.com/Soulsender
 
 usage: ./main.sh [-htd]
 
@@ -7,3 +9,4 @@ Command Summary
     -h      Display this help screen
     -t      Install tools (a list can be found in tools.sh in the repository) 
     -d      Install the desktop and rice
+
