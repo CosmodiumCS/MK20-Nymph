@@ -108,12 +108,11 @@ if [ "$install" = true ]
     then
     chmod +x runoffs/desktop.sh
     ./runoffs/desktop.sh
-
   fi
 
   if [ "$tools" = true ]
     then
     chmod +x runoffs/tools.sh
     ./runoffs/tools.sh
-    
+
 fi
