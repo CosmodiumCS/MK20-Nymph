@@ -63,7 +63,6 @@ echo -e ''${red}${bold}'
              ..             '${reset}${bold}'Welcome to the Team'${reset}${red}'
                      saintssec.com      'By Soulsender'
                       '${reset}''
-
 sleep 5
 
 if [ "$tools" = true ]
