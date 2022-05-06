@@ -9,13 +9,30 @@ reset="\e[0m"
 
 cd $HOME
 
-# apt-get -y kde-plasma-desktop
-# apt-get -y feh
+apt-get -y kde-plasma-desktop
+apt-get -y feh
+apt-get -y git
 
-# # copy kde configuration to home directory
-# cp -r -f $HOME/nymph/assets/.kde4 $HOME
+# install kde theme
+echo -e "${blue}Installing KDE theme..."
+cd $HOME
+git clone https://github.com/yeyushengfan258/LyraS-kde
+cd LyraS-kde
+cat AUTHORS
+chmod +x install.sh
+./install.sh
 
-# # change wallpaper
-# feh -bg --scale $HOME/nymph/assets/wallpapers/saints-name.png
+# copy kde configuration to home directory
+echo -e "${blue}Copying configuration files..."
+sleep 2
+cp -r -f $HOME/nymph/assets/.kde4 $HOME
+cp -r -f $HOME/nymph/assets/LyraS-dark $HOME/.local/share/plasma/desktoptheme
+cp -r -f $HOME/nymph/assets/color-schemes $HOME/.local/share
 
+# change wallpaper
+cp $HOME/nymph/assets/wallpapers $HOME/Pictures
+feh -bg --scale $HOME/Pictures/wallpapers/saints-name.png
+sed -i "$ a feh -bg --scale $HOME/Pictures/saints-name.png" .xinitrc
+
+# finish installation
 echo -e "${green}Desktop installation successful${reset}"

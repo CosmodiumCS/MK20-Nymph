@@ -3,6 +3,10 @@ Saints Desktop
 By Soulsender
 github.com/Soulsender
 
+Desktop Template
+By yeyushengfan258
+https://github.com/yeyushengfan258
+
 usage: ./main.sh [-htd]
 
 Command Summary

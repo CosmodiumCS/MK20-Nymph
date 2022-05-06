@@ -122,6 +122,7 @@ done
 # sourcing
 if [ "$install" = true ]
   then
+  cd $HOME
   apt-get update
 
   if [ "$desktop" = true ]
