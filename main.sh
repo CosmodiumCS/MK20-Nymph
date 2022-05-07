@@ -127,18 +127,18 @@ done
 # sourcing
 if [ "$install" = true ]
   then
-  cd $HOME
+  cd ~
   apt-get update
 
   if [ "$desktop" = true ]
     then
-    chmod +x ~/nymph/source/desktop.sh
-    exec ~/nymph/source/desktop.sh
+    chmod +x /home/$USER/source/desktop.sh
+    exec /home/$USER/source/desktop.sh
   fi
 
   if [ "$tools" = true ]
     then
-    chmod +x ~/nymph/source/tools.sh
-    exec ~/nymph/source/tools.sh
+    chmod +x /home/$USER/nymph/source/tools.sh
+    exec /home/$USER/nymph/source/tools.sh
   fi
 fi
