@@ -19,6 +19,8 @@ if [[ $# -eq 0 ]] ; then
     exit 0
 fi
 
+
+
 # arguments
 while [ -n "$1" ]
 do
@@ -47,7 +49,7 @@ if [ "$EUID" -ne 0 ]
     exit 0
 fi
 
-# FORCE THEM TO SEE THE ASCII ART
+# FORCE THEM TO SEE THE ASCII ART BECAUSE ITS COOL
 echo -e ''${red}${bold}'
  ..                          
   ...                        
@@ -92,7 +94,10 @@ if [ "$desktop" = false ]
   echo -e "${red}[!] Skipping desktop installation${reset}"
   sleep 2
 fi
-
+echo -e "${blue}================================================================"
+echo -e "Please make sure you cloned this script in your HOME directory."
+echo -e "================================================================${reset}"
+sleep 3
 
 # continue prompt
 while true
@@ -127,13 +132,13 @@ if [ "$install" = true ]
 
   if [ "$desktop" = true ]
     then
-    chmod +x ./source/desktop.sh
-    exec ./source/desktop.sh
+    chmod +x ~/nymph/source/desktop.sh
+    exec ~/nymph/source/desktop.sh
   fi
 
   if [ "$tools" = true ]
     then
-    chmod +x ./source/tools.sh
-    exec ./source/tools.sh
+    chmod +x ~/nymph/source/tools.sh
+    exec ~/nymph/source/tools.sh
   fi
 fi

@@ -9,9 +9,9 @@ reset="\e[0m"
 
 cd $HOME
 
-apt-get -y kde-plasma-desktop
-apt-get -y feh
-apt-get -y git
+apt-get install -y kde-plasma-desktop
+apt-get install -y feh
+apt-get install -y git
 
 # install kde theme
 echo -e "${blue}Installing KDE theme..."
@@ -25,9 +25,9 @@ chmod +x install.sh
 # copy kde configuration to home directory
 echo -e "${blue}Copying configuration files..."
 sleep 2
-cp -r -f $HOME/nymph/assets/.kde4 $HOME
-cp -r -f $HOME/nymph/assets/LyraS-dark $HOME/.local/share/plasma/desktoptheme
-cp -r -f $HOME/nymph/assets/color-schemes $HOME/.local/share
+cp -r -f ~/nymph/nymph/assets/.kde4 ~
+cp -r -f ~/nymph/assets/LyraS-dark ~/.local/share/plasma/desktoptheme
+cp -r -f ~/nymph/assets/color-schemes ~/.local/share
 
 # change wallpaper
 cp $HOME/nymph/assets/wallpapers $HOME/Pictures
