@@ -69,6 +69,7 @@ echo -e ''${red}${bold}'
 sleep 5
 
 
+
 # install components = true
 if [ "$tools" = true ]
   then
@@ -132,13 +133,13 @@ if [ "$install" = true ]
 
   if [ "$desktop" = true ]
     then
-    chmod +x /home/$USER/source/desktop.sh
-    exec /home/$USER/source/desktop.sh
+    chmod +x /home/$SUDO_USER/source/desktop.sh
+    exec /home/$SUDO_USER/source/desktop.sh
   fi
 
   if [ "$tools" = true ]
     then
-    chmod +x /home/$USER/nymph/source/tools.sh
-    exec /home/$USER/nymph/source/tools.sh
+    chmod +x /home/$SUDO_USER/nymph/source/tools.sh
+    exec /home/$SUDO_USER/nymph/source/tools.sh
   fi
 fi

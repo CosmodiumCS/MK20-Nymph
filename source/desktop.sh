@@ -23,13 +23,13 @@ chmod +x install.sh
 # copy kde configuration to home directory
 echo -e "${blue}Copying configuration files..."
 sleep 2
-cp -r -f ~/nymph/nymph/assets/.kde4 ~
-cp -r -f ~/nymph/assets/LyraS-dark ~/.local/share/plasma/desktoptheme
-cp -r -f ~/nymph/assets/color-schemes ~/.local/share
+cp -r -f /home/$SUDO_USER/nymph/nymph/assets/.kde4 ~
+cp -r -f /home/$SUDO_USER/nymph/assets/LyraS-dark ~/.local/share/plasma/desktoptheme
+cp -r -f /home/$SUDO_USER/nymph/assets/color-schemes ~/.local/share
 
 # change wallpaper
-cp ~/nymph/assets/wallpapers ~/Pictures
-feh -bg --scale ~/Pictures/wallpapers/saints-name.png
+cp /home/$SUDO_USER/nymph/assets/wallpapers /home/$SUDO_USER/Pictures
+feh -bg --scale /home/$SUDO_USER/Pictures/wallpapers/saints-name.png
 sed -i "$ a feh -bg --scale ~/Pictures/saints-name.png" .xinitrc
 
 # finish installation
