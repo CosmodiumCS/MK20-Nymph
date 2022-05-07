@@ -133,13 +133,13 @@ if [ "$install" = true ]
 
   if [ "$desktop" = true ]
     then
-    chmod +x /home/$SUDO_USER/source/desktop.sh
-    exec /home/$SUDO_USER/source/desktop.sh
+    chmod +x /home/$SUDO_USER/Nymph/source/desktop.sh
+    exec /home/$SUDO_USER/Nymph/source/desktop.sh
   fi
 
   if [ "$tools" = true ]
     then
-    chmod +x /home/$SUDO_USER/nymph/source/tools.sh
-    exec /home/$SUDO_USER/nymph/source/tools.sh
+    chmod +x /home/$SUDO_USER/Nymph/source/tools.sh
+    exec /home/$SUDO_USER/Nymph/source/tools.sh
   fi
 fi
