@@ -1,0 +1,153 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=112,111,110
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+Enable=
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=112,111,110
+ColorAmount=-0.9500000000000001
+ColorEffect=0
+ContrastAmount=0.1
+ContrastEffect=0
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=31,37,47
+BackgroundNormal=34,41,52
+DecorationFocus=134,0,56
+DecorationHover=134,0,56
+ForegroundActive=190,207,210
+ForegroundInactive=168,183,185
+ForegroundLink=176,0,76
+ForegroundNegative=255,85,127
+ForegroundNeutral=26,31,39
+ForegroundNormal=190,207,210
+ForegroundPositive=0,170,127
+ForegroundVisited=127,140,141
+
+[Colors:Complementary]
+BackgroundAlternate=31,37,47
+BackgroundNormal=34,41,52
+DecorationFocus=69,87,108
+DecorationHover=134,0,56
+ForegroundActive=214,214,214
+ForegroundInactive=128,153,193
+ForegroundLink=176,0,76
+ForegroundNegative=255,85,127
+ForegroundNeutral=255,255,127
+ForegroundPositive=0,170,127
+ForegroundVisited=61,174,233
+
+[Colors:Selection]
+BackgroundAlternate=31,37,47
+BackgroundNormal=134,0,56
+DecorationFocus=134,0,56
+DecorationHover=134,0,56
+ForegroundActive=190,207,210
+ForegroundInactive=151,165,167
+ForegroundLink=176,0,76
+ForegroundNegative=255,85,127
+ForegroundNeutral=26,31,39
+ForegroundNormal=190,207,210
+ForegroundPositive=0,170,127
+ForegroundVisited=191,210,211
+
+[Colors:Tooltip]
+BackgroundAlternate=31,37,47
+BackgroundNormal=34,41,52
+DecorationFocus=134,0,56
+DecorationHover=134,0,56
+ForegroundActive=190,207,210
+ForegroundInactive=168,183,185
+ForegroundLink=176,0,76
+ForegroundNegative=255,85,127
+ForegroundNeutral=26,31,39
+ForegroundNormal=190,207,210
+ForegroundPositive=0,170,127
+ForegroundVisited=127,140,141
+
+[Colors:View]
+BackgroundAlternate=31,37,47
+BackgroundNormal=34,41,52
+DecorationFocus=134,0,56
+DecorationHover=134,0,56
+ForegroundActive=190,207,210
+ForegroundInactive=168,183,185
+ForegroundLink=176,0,76
+ForegroundNegative=255,85,127
+ForegroundNeutral=26,31,39
+ForegroundNormal=190,207,210
+ForegroundPositive=0,170,127
+ForegroundVisited=116,140,176
+
+[Colors:Window]
+BackgroundAlternate=31,37,47
+BackgroundNormal=34,41,52
+DecorationFocus=134,0,56
+DecorationHover=134,0,56
+ForegroundActive=190,207,210
+ForegroundInactive=168,183,185
+ForegroundLink=176,0,76
+ForegroundNegative=255,85,127
+ForegroundNeutral=26,31,39
+ForegroundNormal=190,207,210
+ForegroundPositive=0,170,127
+ForegroundVisited=127,140,141
+
+[DirSelect Dialog]
+DirSelectDialog Size=844,598
+History Items[$e]=file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/shared,file:///opt/virtualbox-vms,file:///opt/,file:///,file:$HOME/VirtualBox VMs/kali-shared-dir,file:$HOME/VirtualBox VMs,file:$HOME/VirtualBox VMs,file:$HOME/isos,file:$HOME/isos,file:$HOME/torrents/done,file:$HOME/torrents/done/kali-linux-2021.4a-virtualbox-amd64-ova,file:$HOME/torrents,file:$HOME/torrents,file:$HOME/torrents/done,file:$HOME/torrents/temp,file:$HOME/Downloads,file:$HOME/torrents/completed,file:$HOME/torrents
+
+[General]
+BrowserApplication=start-librewolf.desktop
+ColorScheme=RedDotBlackDarkColor
+Name=Breath Light
+TerminalApplication=terminator
+dbfile=/home/soul/.mozilla/firefox/n3hiuebl.default/places.sqlite
+shadeSortColumn=true
+
+[Icons]
+Theme=candy-icons
+
+[KDE]
+LookAndFeelPackage=org.manjaro.breath-dark.desktop
+contrast=4
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=true
+Sort by=Name
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=138
+View Style=DetailTree
+
+[WM]
+activeBackground=34,41,52
+activeBlend=34,41,52
+activeForeground=190,207,210
+inactiveBackground=34,41,52
+inactiveBlend=34,41,52
+inactiveForeground=122,146,184
