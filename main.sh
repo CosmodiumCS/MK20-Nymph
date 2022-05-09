@@ -7,6 +7,8 @@ blue="\e[0;94m"
 bold="\e[1m"
 reset="\e[0m"
 
+version="v0.2"
+
 desktop=false
 tools=false
 
@@ -61,7 +63,7 @@ echo -e ''${red}${bold}'
      ...........   /  \/ /| | | || `_ ` _ \ | `_ \ | `_ \      
       ..........  / /\  / | |_| || | | | | || |_) || | | |              
         ........  \_\ \/   \__, ||_| |_| |_|| .__/ |_| |_|                
-            ....           |___/            |_|          
+            ....      '$version' |___/            |_|          
            .. ..                             
              ..             '${reset}${bold}'Welcome to the Team'${reset}${red}'
                      saintssec.com      'By Soulsender'

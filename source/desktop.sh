@@ -12,7 +12,7 @@ apt-get install -y feh
 apt-get install -y git
 
 # install kde theme
-echo -e "${blue}Installing KDE theme..."
+echo -e "${blue}Installing KDE theme...${reset}"
 cd /home/$SUDO_USER
 git clone https://github.com/yeyushengfan258/LyraS-kde
 cd LyraS-kde
