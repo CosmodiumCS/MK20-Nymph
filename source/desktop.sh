@@ -10,6 +10,10 @@ reset="\e[0m"
 apt-get install -y kde-plasma-desktop
 apt-get install -y feh
 apt-get install -y git
+if [ "$?" -ne 0 ]
+    then echo -e "${red}Please run as root${reset}"
+    exit 0
+fi
 
 # install kde theme
 echo -e "${blue}Installing KDE theme...${reset}"

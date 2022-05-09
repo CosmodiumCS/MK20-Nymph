@@ -7,7 +7,7 @@ blue="\e[0;94m"
 bold="\e[1m"
 reset="\e[0m"
 
-version="v0.2"
+version="v0.1.1"
 
 desktop=false
 tools=false
@@ -71,31 +71,34 @@ echo -e ''${red}${bold}'
 sleep 5
 
 
+echo -e "Detecting System and Preferences..."
+sleep 1
+echo -e ""
 
 # install components = true
 if [ "$tools" = true ]
   then
-  echo -e "${blue}[!] Found tools${reset}"
-  sleep 2
+  echo -e "${green}[!] Found tools${reset}"
+  sleep 1
 fi
 
 if [ "$desktop" = true ]
   then
-  echo -e "${blue}[!] Found desktop${reset}"
-  sleep 2
+  echo -e "${green}[!] Found desktop${reset}"
+  sleep 1
 fi
 
 # install components = false
 if [ "$tools" = false ]
   then 
   echo -e "${red}[!] Skipping tool installation${reset}"
-  sleep 2
+  sleep 1
 fi
 
 if [ "$desktop" = false ]
   then 
   echo -e "${red}[!] Skipping desktop installation${reset}"
-  sleep 2
+  sleep 1
 fi
 echo -e "${blue}================================================================"
 echo -e "Please make sure you cloned this script in your HOME directory."
