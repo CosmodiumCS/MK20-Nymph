@@ -10,10 +10,6 @@ reset="\e[0m"
 apt-get install -y kde-plasma-desktop
 apt-get install -y feh
 apt-get install -y git
-if [ "$?" -ne 0 ]
-    then echo -e "${red}Please run as root${reset}"
-    exit 0
-fi
 
 # install kde theme
 echo -e "${blue}Installing KDE theme...${reset}"
@@ -36,12 +32,12 @@ cp -r -f /home/$SUDO_USER/Nymph/assets/kdedefaults /home/$SUDO_USER/.config/
 cp -r -f /home/$SUDO_USER/Nymph/assets/plasmarc
 cp -r -f /home/$SUDO_USER/Nymph/assets/candy-icons /home/$SUDO_USER/
 cp -r -f /home/$SUDO_USER/Nymph/assets/plasma /home/$SUDO_USER/.local/share
+cp -r -f /home/$SUDO_USER/Nymph/assets/plasma/desktoptheme/LyraS-dark/icons/start.svg /home/$SUDO_USER/.local/share/plasma/desktoptheme/LyraS-dark/icons
 
 # change wallpaper
-cp -r -f /home/$SUDO_USER/Nymph/assets/wallpapers /home/$SUDO_USER/Pictures
 cp -r -f /home/$SUDO_USER/Nymph/assets/wallpapers /usr/share/backgrounds
-feh -bg --scale /home/$SUDO_USER/Pictures/wallpapers/saints-name.png
-sed -i "$ a feh -bg --scale $SUDO_USER/Pictures/saints-name.png" .xinitrc
+feh --bg-scale /usr/share/backgrounds/wallpapers/saints-name.png
+sed -i "$ a feh --bg-scale $SUDO_USER/Pictures/saints-name.png" .xinitrc
 
 # finish installation
 echo -e "${green}Desktop installation successful${reset}"

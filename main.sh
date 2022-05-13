@@ -21,8 +21,6 @@ if [[ $# -eq 0 ]] ; then
     exit 0
 fi
 
-
-
 # arguments
 while [ -n "$1" ]
 do
