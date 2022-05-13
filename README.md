@@ -1,8 +1,10 @@
 # Nymph
 
+Bash script that will rice, and install various tools in the theme of the [Saints](https://saintssec.com).
+
 <img src="assets/logo.png">
 
-Bash script that will rice, and install various tools in the theme of the [Saints](https://saintssec.com).
+<img src="assets/example.png">
 
 **ONLY EXECUTE `main.sh`.** The other files are meant to run off `main.sh`, and are not supposed to be executed manually.
 
@@ -24,7 +26,7 @@ cd Nymph/
 sudo chmod +x main.sh
 sudo ./main.sh
 ```
-and respond to the prompts that will appear. See `-h` for options.
+and respond to the prompts that will appear. **See `-h` for options.**
 
 ### Post-Install
 Plasma isn't very command-line friendly when it comes to automation as something like i3. Follow these steps until I can get a reliable way to automate everything.
