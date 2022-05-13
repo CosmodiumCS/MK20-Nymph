@@ -7,7 +7,7 @@ blue="\e[0;94m"
 bold="\e[1m"
 reset="\e[0m"
 
-version="v0.1.1"
+version="v0.2"
 
 desktop=false
 tools=false
