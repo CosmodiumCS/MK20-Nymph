@@ -11,6 +11,11 @@ usage: ./main.sh [-htd]
 
 Command Summary
     -h      Display this help screen
-    -t      Install tools (a list can be found in tools.sh in the repository) 
-    -d      Install the desktop and rice
+    
+    -t      Install tools
+                - RustScan          (https://github.com/RustScan/RustScan)
+                - Cryptex           (https://github.com/AlexKollar/Cryptex)
+                - BREACH Toolkit    (https://github.com/ItsJustShepherd/BREACH)
+
+    -d      Install the desktop and rice (see github post-install README)
 
