@@ -10,6 +10,7 @@ reset="\e[0m"
 echo -e "${blue}Installing tools...${reset}"
 
 # Cryptex
+echo -e "${blue}Installing Cryptex...${reset}"
 cd /home/$SUDO_USER
 git clone https://github.com/AlexKollar/Cryptex
 cd Cryptex
@@ -18,6 +19,7 @@ cd /home/$SUDO_USER
 echo -e "${green}Cryptex Installed!${reset}"
 
 # RustScan
+echo -e "${blue}Installing RustScan...${reset}"
 cd /home/$SUDO_USER
 sudo -u $SUDO_USER git clone curl https://sh.rustup.rs -sSf | sh
 wget https://github.com/RustScan/RustScan/releases/download/2.0.1/rustscan_2.0.1_amd64.deb
@@ -27,6 +29,7 @@ echo -e "${green}RustScan Installed!${reset}"
 
 
 # BREACH
+echo -e "${blue}Installing BREACH...${reset}"
 cd /home/$SUDO_USER
 git clone https://github.com/ItsJustShepherd/BREACH
 cd BREACH
