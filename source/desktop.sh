@@ -14,8 +14,8 @@ apt-get install -y git
 # install kde theme
 echo -e "${blue}Installing KDE theme...${reset}"
 cd /home/$SUDO_USER
-git clone https://github.com/yeyushengfan258/LyraS-kde
-cd LyraS-kde
+git clone https://github.com/Soulsender/saints-rice
+cd saints-rice
 cat AUTHORS
 chmod +x install.sh
 ./install.sh
@@ -29,10 +29,9 @@ cp -r -f /home/$SUDO_USER/Nymph/assets/color-schemes /home/$SUDO_USER/.local/sha
 mkdir /home/$SUDO_USER/.local/share/icons
 cp -r -f /home/$SUDO_USER/Nymph/assets/candy-icons /home/$SUDO_USER/.local/share/icons
 cp -r -f /home/$SUDO_USER/Nymph/assets/kdedefaults /home/$SUDO_USER/.config/
-cp -r -f /home/$SUDO_USER/Nymph/assets/plasmarc
-cp -r -f /home/$SUDO_USER/Nymph/assets/candy-icons /home/$SUDO_USER/
+cp -r -f /home/$SUDO_USER/Nymph/assets/plasmarc /home/$SUDO_SUER/.config/
+cp -r -f /home/$SUDO_USER/Nymph/assets/candy-icons /home/$SUDO_USER/.local/share/icons/
 cp -r -f /home/$SUDO_USER/Nymph/assets/plasma /home/$SUDO_USER/.local/share
-cp -r -f /home/$SUDO_USER/Nymph/assets/plasma/desktoptheme/LyraS-dark/icons/start.svg /home/$SUDO_USER/.local/share/plasma/desktoptheme/LyraS-dark/icons
 
 # change wallpaper
 cp -r -f /home/$SUDO_USER/Nymph/assets/wallpapers /usr/share/backgrounds
