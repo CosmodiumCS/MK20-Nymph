@@ -39,4 +39,4 @@ feh --bg-scale /usr/share/backgrounds/wallpapers/saints-name.png
 sed -i "$ a feh --bg-scale $SUDO_USER/Pictures/saints-name.png" .xinitrc
 
 # finish installation
-echo -e "${green}Desktop installation successful${reset}"
+echo -e "${green}Desktop installation successful. Log out and select Plasma from your respective display manager. See the README for post-installation instructions.${reset}"
