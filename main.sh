@@ -7,7 +7,7 @@ blue="\e[0;94m"
 bold="\e[1m"
 reset="\e[0m"
 
-version="v1.0.0"
+version="v1.0.1"
 
 desktop=false
 tools=false
@@ -98,10 +98,12 @@ if [ "$desktop" = false ]
   echo -e "${red}[!] Skipping desktop installation${reset}"
   sleep 1
 fi
-echo -e "${blue}================================================================"
-echo -e "Please make sure you cloned this script in your HOME directory."
-echo -e "================================================================${reset}"
-sleep 3
+
+# check if script is cloned in home directory
+if [ pwd != "/home/$SUDO_USER/Nymph" ]; then
+    echo -e "${red}Please make sure you cloned this script in your HOME directory.${reset}"
+    exit 0
+fi
 
 # continue prompt
 while true
