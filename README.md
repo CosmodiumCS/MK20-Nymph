@@ -1,10 +1,6 @@
 # Nymph
 
-Bash script that will rice, and install various tools in the theme of the [Saints](https://saintssec.com).
-
-<img src="assets/logo.png">
-
-<img src="assets/example.png">
+Bash script that will rice, and install various tools.
 
 **ONLY EXECUTE `main.sh`.** The other files are meant to run off `main.sh`, and are not supposed to be executed manually.
 
@@ -32,7 +28,7 @@ Plasma isn't very command-line friendly when it comes to automation as something
  - **STEP 1:** Open the menu with your super key (or windows key), and find Plasma Style. Select `LyraS-dark` from this menu and hit apply. 
  - **STEP 2:** Open the menu again, and find Icons. Select `candy-icons` and hit apply. 
  - **STEP 3:** Right click on the desktop and select configure desktop. The wallpaper will be stored in `/usr/share/backgrounds/wallpapers/saints-name.png`. Add it, and hit apply. 
- - **STEP 4:** Right click on the start menu icon and select Configure Application Launcher. Click on the icon, and use the image in `~/.local/share/plasma/desktoptheme/LyraS-dark/icons/start.svg` to set it to the saints icon. If you are unable to see hidden directories, check the top right of the Dolphin file manager to enable hidden files.
+ - **STEP 4:** Right click on the start menu icon and select Configure Application Launcher. Click on the icon, and you can use whatever image you would like. If you are unable to see hidden directories, check the top right of the Dolphin file manager to enable hidden files.
  - **Optional STEP 5:** If you decided to use `sddm` as your login manager, and not the default one that ships with your chosen distro, simply type in Login Screen in the menu, and customize to your liking. Should you decide to go back to your old login manager, open a terminal and run
  ```
  sudo systemctl disable sddm
@@ -47,4 +43,3 @@ sudo systemctl enable lightdm
 ### Credit
  - [Template Plasma Theme (LyraS-dark)](https://github.com/yeyushengfan258/LyraS-kde)
  - [Candy Icons](https://store.kde.org/p/1305251)
- - [Saints Icons & wallpapers](https://github.com/itsjustshepherd)
