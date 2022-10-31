@@ -1,21 +1,27 @@
 
-Saints Desktop
-By Soulsender
-github.com/Soulsender
+Nymph Desktop
+    By Soulsender
+    github.com/Soulsender
+    soulsender.me
 
-Desktop Template
-By yeyushengfan258
-https://github.com/yeyushengfan258
+    Desktop Template
+    By yeyushengfan258
+    https://github.com/yeyushengfan258
 
 usage: ./main.sh [-htd]
 
 Command Summary
-    -h      Display this help screen
+    --help      Display this help screen
     
-    -t      Install tools
+    --tools      Install tools
                 - RustScan          (https://github.com/RustScan/RustScan)
-                - Cryptex           (https://github.com/AlexKollar/Cryptex)
-                - BREACH Toolkit    (https://github.com/ItsJustShepherd/BREACH)
+                - SkeletonKey       (https://github.com/CosmodiumCS/SkeletonKey)
+                - NMap
+                - Tor Service
+                - Wireshark
+                - FeroxBuster
+                - Macchanger
+                - Terminator Terminal
 
-    -d      Install the desktop and rice (see github post-install README)
+    --desktop   Install the desktop and rice (see github post-install README)
 

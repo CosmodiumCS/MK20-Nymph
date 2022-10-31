@@ -1,4 +1,4 @@
-# Nymph
+# Nymph (WIP - There will be bugs)
 
 Bash script that will rice, and install various tools.
 

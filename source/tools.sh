@@ -8,34 +8,18 @@ bold="\e[1m"
 reset="\e[0m"
 
 echo -e "${blue}Installing tools...${reset}"
+sleep 2
 
-# Cryptex
-echo -e "${blue}Installing Cryptex...${reset}"
-cd /home/$SUDO_USER
-git clone https://github.com/AlexKollar/Cryptex
-cd Cryptex
-sh install.sh
-cd /home/$SUDO_USER
-echo -e "${green}Cryptex Installed!${reset}"
+# tools to install
+apt-get install -y nmap
+apt-get install -y wireshark
+apt-get install -y macchanger
+apt-get install -y tor
+apt-get install -y terminator
 
-# RustScan
-echo -e "${blue}Installing RustScan...${reset}"
-cd /home/$SUDO_USER
-sudo -u $SUDO_USER git clone curl https://sh.rustup.rs -sSf | sh
-wget https://github.com/RustScan/RustScan/releases/download/2.0.1/rustscan_2.0.1_amd64.deb
-dpkg -i rustscan_2.0.1_amd64.deb
-rm -f rustscan_2.0.1_amd64.deb
-echo -e "${green}RustScan Installed!${reset}"
-
-
-# BREACH
-echo -e "${blue}Installing BREACH...${reset}"
-cd /home/$SUDO_USER
-git clone https://github.com/ItsJustShepherd/BREACH
-cd BREACH
-pip install -r ./requirements.txt
-echo "alias breach=\"python3 ~/BREACH/breach.py\"" >> /home/$SUDO_USER/.bashrc
-echo "alias breach=\"python3 ~/BREACH/breach.py\"" >> /home/$SUDO_USER/.zshrc
-echo -e "${green}BREACH Toolkit Installed!${reset}"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME_DIR/.cargo/env"
+cargo install rustscan
+cargo install feroxbuster
 
 echo -e "${green}Tool installation successful${reset}"

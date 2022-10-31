@@ -7,12 +7,22 @@ blue="\e[0;94m"
 bold="\e[1m"
 reset="\e[0m"
 
-version="v1.0.1"
+version="v0.2"
 
-desktop=false
-tools=false
+DESKTOP=false
+TOOLS=false
+INSTALL=false
 
-install=false
+# get client variables
+export HOME_DIR=/home/$SUDO_USER
+export WORKING_DIR=`pwd`
+export TOOL_DIR=$WORKING_DIR/source/tools.sh
+export DESKTOP_DIR=$WORKING_DIR/source/tools.sh
+
+echo $HOME_DIR
+echo $WORKING_DIR
+echo $TOOL_DIR
+echo $DESKTOP_DIR
 
 
 # check for arguments
@@ -25,15 +35,15 @@ fi
 while [ -n "$1" ]
 do
 case "$1" in
--h) 
+--help)
   cat assets/help.txt
   exit 0
 ;;
--d) 
-  desktop=true
+--desktop) 
+  DESKTOP=true
 ;;
--t) 
-  tools=true
+--tools) 
+  TOOLS=true
 ;;
 *) 
   echo -e "${red}$1 is not an option. See -h for a list of arguments. ${reset}" 
@@ -50,7 +60,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # FORCE THEM TO SEE THE ASCII ART BECAUSE ITS COOL
-echo -e ''${red}${bold}'
+echo -e ''${blue}${bold}'
  ..                          
   ...                        
   ....                      
@@ -61,59 +71,48 @@ echo -e ''${red}${bold}'
      ...........   /  \/ /| | | || `_ ` _ \ | `_ \ | `_ \      
       ..........  / /\  / | |_| || | | | | || |_) || | | |              
         ........  \_\ \/   \__, ||_| |_| |_|| .__/ |_| |_|                
-            ....    '$version' |___/            |_|          
+            ....      '$version' |___/            |_|          
            .. ..                             
-             ..             '${reset}${bold}'Welcome to the Team'${reset}${red}'
-                     saintssec.com      'By Soulsender'
+             ..             '${reset}${bold}'By Soulsender'${reset}${blue}'
+                            'soulsender.me'
                       '${reset}''
-sleep 5
 
 
 echo -e "Detecting System and Preferences..."
-sleep 1
+sleep 5
 echo -e ""
 
-# install components = true
-if [ "$tools" = true ]
+# INSTALL components = true
+if [ "$TOOLS" = true ]
   then
-  echo -e "${green}[!] Found tools${reset}"
-  sleep 1
+  echo -e "${green}[!] Found Tools${reset}"
 fi
 
-if [ "$desktop" = true ]
+if [ "$DESKTOP" = true ]
   then
-  echo -e "${green}[!] Found desktop${reset}"
-  sleep 1
+  echo -e "${green}[!] Found Desktop${reset}"
 fi
 
-# install components = false
-if [ "$tools" = false ]
+# INSTALL components = false
+if [ "$TOOLS" = false ]
   then 
-  echo -e "${red}[!] Skipping tool installation${reset}"
-  sleep 1
+  echo -e "${red}[!] Skipping Tools Installation${reset}"
 fi
 
-if [ "$desktop" = false ]
+if [ "$DESKTOP" = false ]
   then 
-  echo -e "${red}[!] Skipping desktop installation${reset}"
-  sleep 1
-fi
-
-# check if script is cloned in home directory
-if [ pwd != "/home/$SUDO_USER/Nymph" ]; then
-    echo -e "${red}Please make sure you cloned this script in your HOME directory.${reset}"
-    exit 0
+  echo -e "${red}[!] Skipping Desktop Installation${reset}"
 fi
 
 # continue prompt
 while true
 do
-  read -r -p "Is the selection correct, and would you like to begin the install? [Y/n]" input
+  read -r -p "Is the selection correct, and would you like to begin the installation? [Y/n]" input
   case $input in
     [yY][eE][sS]|[yY])
       echo -e "${green}Beginning Installation...${reset}"
       sleep 2
-      install=true
+      INSTALL=true
       break
       ;;
 
@@ -131,20 +130,20 @@ do
 done
 
 # sourcing
-if [ "$install" = true ]
+if [ "$INSTALL" = true ]
   then
-  cd ~
+  cd $HOME_DIR
   apt-get update
 
-  if [ "$desktop" = true ]
+  if [ "$DESKTOP" = true ]
     then
-    chmod +x /home/$SUDO_USER/Nymph/source/desktop.sh
-    exec /home/$SUDO_USER/Nymph/source/desktop.sh
+    chmod +x $DESKTOP_DIR
+    exec $DESKTOP_DIR
   fi
 
-  if [ "$tools" = true ]
+  if [ "$TOOLS" = true ]
     then
-    chmod +x /home/$SUDO_USER/Nymph/source/tools.sh
-    exec /home/$SUDO_USER/Nymph/source/tools.sh
+    chmod +x $TOOL_DIR
+    exec $TOOL_DIR
   fi
 fi
