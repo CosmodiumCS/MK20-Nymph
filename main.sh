@@ -16,8 +16,8 @@ INSTALL=false
 # get client variables
 export HOME_DIR=/home/$SUDO_USER
 export WORKING_DIR=`pwd`
-export TOOL_DIR=$WORKING_DIR/source/tools.sh
-export DESKTOP_DIR=$WORKING_DIR/source/tools.sh
+export TOOL_DIR=$WORKING_DIR/src/tools.sh
+export DESKTOP_DIR=$WORKING_DIR/src/tools.sh
 
 echo $HOME_DIR
 echo $WORKING_DIR

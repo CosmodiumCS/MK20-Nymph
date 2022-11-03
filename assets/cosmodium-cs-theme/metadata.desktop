@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=cosmodium-cs-theme
+X-KDE-PluginInfo-Author=Soulsender
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=GPL3.0
+X-KDE-PluginInfo-Name=cosmodium-cs-theme
+X-KDE-PluginInfo-Version=.0.4
+X-KDE-PluginInfo-Website=
+
+[Wallpaper]
+defaultWallpaperTheme=cosmodium-cs-theme
+defaultFileSuffix=.png
+defaultHeight=1080
+defaultWidth=1920
