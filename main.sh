@@ -17,7 +17,7 @@ INSTALL=false
 export HOME_DIR=/home/$SUDO_USER
 export WORKING_DIR=`pwd`
 export TOOL_DIR=$WORKING_DIR/src/tools.sh
-export DESKTOP_DIR=$WORKING_DIR/src/tools.sh
+export DESKTOP_DIR=$WORKING_DIR/src/desktop.sh
 
 echo $HOME_DIR
 echo $WORKING_DIR
@@ -79,7 +79,7 @@ echo -e ''${blue}${bold}'
 
 
 echo -e "Detecting System and Preferences..."
-sleep 5
+sleep 2
 echo -e ""
 
 # INSTALL components = true
@@ -111,7 +111,6 @@ do
   case $input in
     [yY][eE][sS]|[yY])
       echo -e "${green}Beginning Installation...${reset}"
-      sleep 2
       INSTALL=true
       break
       ;;
